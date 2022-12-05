@@ -27,7 +27,7 @@ fn main() {
 
     // let four = &new_vector_third[3];
 
-    for i in &new_vector_third {
+    for i in new_vector_third {
         println!("{i}");
     }
 

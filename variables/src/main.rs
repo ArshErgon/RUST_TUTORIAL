@@ -64,7 +64,7 @@ fn main() {
     // filled by the user
 
     println!("Enter the number: ");
-    let mut array_size = String::new();
+    // let mut array_size = String::new();
 
     // getting the size of the array to be made
 

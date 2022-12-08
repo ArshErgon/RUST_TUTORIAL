@@ -49,6 +49,9 @@ fn main() {
     let new_num: i32 = "5".parse().unwrap();
     println!("{new_num}");
 
+    let num_to_str = 5.to_string();
+    println!("{num_to_str}");
+
     // unpacking a string number in a integer
     let new_num_without_type = "10".parse::<i32>().unwrap();
     println!("{}", new_num_without_type);

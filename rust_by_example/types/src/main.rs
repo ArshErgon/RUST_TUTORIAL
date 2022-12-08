@@ -1,6 +1,9 @@
 // Suppress all warnings from casts which overflow.
 #![allow(overflowing_literals)]
 
+// using `type` make sure name the type in camelCase
+type Number = i32;
+
 fn main() {
     let decimal = 65.4321_f32;
 
@@ -75,4 +78,7 @@ fn main() {
         // nan as u8 is 0
         println!("nan as u8 is {}", f32::NAN.to_int_unchecked::<u8>());
     }
+
+    let num: Number = 12;
+    println!("{num}");
 }

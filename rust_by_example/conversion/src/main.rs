@@ -17,6 +17,31 @@ struct Person {
     age: i32,
 }
 
+struct Information {
+    name: String,
+    age: i64,
+    is_old: bool,
+    is_married: bool,
+}
+
+impl Information {
+    fn tell_the_information(&self) {
+        println!(
+            "The person name {} his age: {} is old: {} married status: {} ",
+            self.name, self.age, self.is_old, self.is_married
+        );
+    }
+
+    fn can_vote(&self) {
+        if self.is_old {
+            println!("Can Vote!");
+        } else {
+            println!("Is not old enough\nTry to change the age");
+        }
+    }
+}
+
+
 // to make u understand the use impl
 
 impl Person {
@@ -56,4 +81,14 @@ fn main() {
     let new_num_without_type = "10".parse::<i32>().unwrap();
     println!("{}", new_num_without_type);
     println!("{}", new_num + new_num_without_type);
+
+    let get_person_information = Information {
+        name: "Arsh".to_string(),
+        age: 20,
+        is_old: false,
+        is_married: false,
+    };
+
+    get_person_information.tell_the_information();
+    get_person_information.can_vote();
 }
